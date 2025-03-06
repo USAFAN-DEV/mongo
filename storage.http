@@ -1,0 +1,41 @@
+GET http://localhost:3000/storage
+
+###
+
+GET http://localhost:3000/storage/67b59fd78a81faef2e927169
+
+###
+
+POST http://localhost:3000/storage HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary123
+
+--boundary123
+Content-Disposition: form-data; name="file"; filename="wp1892116-kimi-no-na-wa-wallpapers.png"
+Content-Type: image/png
+
+< ./wp1892116-kimi-no-na-wa-wallpapers.png
+--boundary123--
+
+###
+
+PUT http://localhost:3000/storage/67b59fd78a81faef2e927169
+Content-Type: application/json
+
+{
+    "filename": "nicolas.html"
+}
+
+###
+
+PATCH http://localhost:3000/storage/67b59fd78a81faef2e927169
+Content-Type: application/json
+
+{
+    "filename": "oscar.html"
+}
+
+###
+
+DELETE http://localhost:3000/storage/67b7124822739624c5d0309a
+
+

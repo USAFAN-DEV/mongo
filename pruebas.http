@@ -1,0 +1,52 @@
+GET http://localhost:3000/users
+api_key:NGV
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5N2FmNTg1YTFhMTEwMDM2NzBiMjAiLCJyb2xlIjpbInVzZXIiXSwiaWF0IjoxNzQxMjU3NDYxLCJleHAiOjE3NDEyNjQ2NjF9.7qCm5HFmSQmBtYIJQhNwJ1_liaArGB7mkNXi5RsLX8g
+
+###
+
+GET http://localhost:3000/users
+api_key:NGV
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5ODVlZDdkNzU2Zjc5YWZlODgwOWMiLCJyb2xlIjpbImFkbWluIl0sImlhdCI6MTc0MTI2MDI2OSwiZXhwIjoxNzQxMjY3NDY5fQ.h52OVXQIUsIt3vTdmAo6gf7-H1g1r3fQEchr9AsOdqg
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name":"Eduardo",
+    "age":18,
+    "email":"eduardo@gmail.com",
+    "password":"123456789",
+    "role": "admin"
+}
+
+###
+
+GET http://localhost:3000/users/67b5928892f5bdba9f03ee50
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+api_key:NGV
+
+{
+    "name": "Eduardo",
+    "email": "dadafsaf.graullera@gmail.com",
+    "password": "123456"
+}
+
+###
+
+PUT http://localhost:3000/users/nicolas.graullera@gmail.com
+Content-Type: application/json
+
+{
+    "name": "Nicolas"
+}
+
+###
+
+DELETE http://localhost:3000/users/67c9811b064e4aac5f26662f
+api_key:NGV
+
